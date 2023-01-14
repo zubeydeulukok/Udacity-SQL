@@ -379,13 +379,13 @@ SELECT a.id, a.name, AVG(total_amt_usd)
 FROM orders o
 JOIN accounts a
 ON a.id = o.account_id AND a.id IN (SELECT id
-								    FROM (SELECT a.id, a.name, SUM(o.total_amt_usd) tot_spent
-										FROM orders o
-										JOIN accounts a
-										ON a.id = o.account_id
-										GROUP BY a.id, a.name
-										ORDER BY 3 DESC
-										LIMIT 10) t1 )
+				FROM (SELECT a.id, a.name, SUM(o.total_amt_usd) tot_spent
+					FROM orders o
+					JOIN accounts a
+					ON a.id = o.account_id
+					GROUP BY a.id, a.name
+					ORDER BY 3 DESC
+					LIMIT 10) t1 )
 GROUP BY 1, 2
 ORDER BY 3 DESC;
 
@@ -408,7 +408,7 @@ JOIN orders o
 ON a.id = o.account_id
 GROUP BY 1
 HAVING AVG(o.total_amt_usd/ (o.total+0.01)) > (SELECT AVG(o.total_amt_usd / (o.total+0.01))
-											   FROM orders o)) t1 ;
+						FROM orders o)) t1 ;
 
 
 -- The solution by Udacity
