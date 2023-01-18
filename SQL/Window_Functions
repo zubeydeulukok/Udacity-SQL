@@ -1,8 +1,1 @@
-## Window Functions
 
-### Two Use Cases for Window Functions
-
-- When you want to measure trends or changes over rows or records in your data.
-- When you want to rank a column for outreach or prioritization.
-
-A few cases where you’d have these needs are described below:
