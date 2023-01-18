@@ -1,0 +1,21 @@
+# **Window Functions**
+We will cover window functions.
+## **Two Use Cases for Window Functions**
+- When you want to measure trends or changes over rows or records in your data.
+- When you want to rank a column for outreach or prioritization.
+In other words,
+- to understand a running total or a running metric while maintaining individual records
+- to rank a dataset
+
+A few cases where you’d have these needs are described below:
+
+### **Measuring change over time:**
+- Has the average price of airline tickets gone up this year?
+- What’s the best way to keep the running total orders of customers?
+### **The ranking used for outreach prioritization:**
+- Use a combination of factors to rank companies most likely to need a loan.
+
+
+
+
+
